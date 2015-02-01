@@ -11,14 +11,14 @@
     <script>
       var todoApp = angular.module("todoApp", []);
       
+      todoApp.run(function($http) {
+        $http.get("todo.json").success(function(data) {
+          model.items = data;
+        });
+      });
+      
       var model = {
-        user: "Adam",
-        items: [ 
-          { action: "Buy flowers", done: false },
-          { action: "Get showes", done: false },
-          { action: "Collect tickets", done: true },
-          { action: "Call Joe", done: false }
-        ]
+        user: "Adam"
       };
 
       todoApp.controller("TodoCtrl", function($scope) {
