@@ -1,0 +1,3 @@
+{ "name" : "angularjs-examples"
+, "version" : "1.0.0"
+, "dependencies" : { "connect" : "latest", "serve-static" : "latest" } }
